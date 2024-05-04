@@ -1,0 +1,128 @@
+---
+import HeroText from '~/components/widgets/HeroText.astro';
+import TestimonialsComponent from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const testimonials = [
+  {
+    name: 'Jo Fletcher-Cross',
+    job: 'Editorial Manager, APL Media',
+    testimonial:
+      'I have worked with Karen on several projects now and she is a dedicated, thorough and lovely person to work with. Her attention to detail and work ethic is excellent. She’s a diligent researcher and responds well to every brief. I would not hesitate to recommend her for any copywriting or content creation work.',
+  },
+  {
+    name: 'Zane Henry',
+    job: 'Project Manager, National Geographic Traveller (UK)',
+    testimonial:
+      'Karen was an excellent addition to our team, and contributed to several of our titles, including National Geographic Traveller, National Geographic Traveller Food, Postcards and Worldwide Destination Guide. She worked diligently and enthusiastically on multiple projects, including writing and researching original content, picture research and sub-editing. Karen was a pleasure to have in the office, and I was impressed by her passion, work ethic and flexibility. She will be a great addition to any organisation in the future and I wish her the best as in her career.',
+  },
+  {
+    name: 'Debra Corbeil',
+    job: 'Founder and Editor of The Planet D',
+    testimonial:
+      'Karen wrote a series of articles for The Planet D and she did a fantastic job. Karen was professional, efficient, and easy to work with producing great content. We would definitely hire Karen again.',
+  },
+  {
+    name: 'Ieashia Krstev',
+    job: 'Owner, ISJ Photography',
+    testimonial:
+      "Karen wrote insightful website copy to help me promote my brand. Working together she wrote up my landing page, About me section and my first ever blog post! She created a great tagline to go with my new branding 'creating visual heirlooms'. She also helped me with lots of marketing ideas and a personalised social media plan for Instagram and Facebook, which is aimed at my target market. As well as the above, Karen proofread my other website and social media copy. Being dyslexic, I find it hard to get what's in my thoughts down on paper, so her being there to proofread everything to give a boost and oomph to my presence on social media and search engines to get noticed has been amazing. I would highly recommend her services.",
+  },
+  {
+    name: 'Elena Zamosteanu',
+    job: 'CEO, Night Health Worker Recovery Box',
+    testimonial:
+      "I am extremely happy with Karen's work. She wrote all the copy for my subscription box ecommerce website, writing engaging and informative text to show off my company. She wrote the landing page info, welcome letter, sales pages, product description, my story, FAQs, contact page - the entire site. She created two taglines for my company - one for the product, 'Relax - Replenish - Revitalize', and one to engage prospective customers to make a call to action 'Because carers need care too'. She wrote me a script and gave me content strategies for my social media platforms and gave me advice on marketing techniques to help me gain traffic. Her writing is very high quality and she's great to work with - very helpful, friendly, goes above and beyond the project requirement, and genuinely cares about her clients and helping them get their business up and running. I'll definitely hire her again and I'd highly recommend her for any project.",
+  },
+  {
+    name: "Denella Ri'chard",
+    job: 'Travel show host and global sales marketing executive',
+    testimonial:
+      "Karen is my script writer for season 2 of my travel show 'Traveling with Denella Ri'chard'. I am very happy with her work so have asked her to work on the whole season. Her writing has flair and insight. She understands the tone of voice, theme and message that I want my show to give, and her words contribute greatly to spreading that message. Her travel knowledge is broad and she has first-hand knowledge of many worldwide destinations which, along with her great research skills, make her an expert writer in the travel genre. She's a very hard worker and produces high-quality copy, and works well to tight deadlines when needed. I'd highly recommend her for any content, copywriting or script writing project and will be continuing to use her services for my show.",
+  },
+  {
+    name: 'Marta Dickson',
+    job: 'Creative Director, MD Shoes Ltd',
+    testimonial:
+      'I was very happy with Karen’s services. She provided me with a very well-written optimized SEO article for my blog that connected well with my reader demographic. She created a detailed content strategy for my social media accounts on Facebook and Instagram and provided me with full website analysis and created an insightful business strategy to improve traffic and user experience. Her work is thorough, well-researched and high-quality. I’ll definitely hire her again and would recommend her to anyone looking to connect with or extend their customer base.',
+  },
+  {
+    name: 'Henry Alexander III',
+    job: 'Producer and band member, Dereliks hip-hop band',
+    testimonial:
+      'Karen edited my memoir of my time in a hip-hop band. She was extremely patient with me as a new writer and with multiple moving parts involved in the project. She did an outstanding job. I would highly recommend her.',
+  },
+  {
+    name: 'Nick Worrall',
+    job: 'Freelance Web Developer',
+    testimonial:
+      'Karen did a meticulous job proofreading my portfolio website and LinkedIn profile. She catches every tiny error, which made my work look professional. She works quickly and precisely and I’d recommend her for any proofreading work to give any brand the polished, professional look everyone wants.',
+  },
+  {
+    name: 'Rasim Aliyev',
+    job: 'Expert Lead at Uptime app',
+    testimonial:
+      'Fantastic writer. Karen wrote a summary of an educational course for us, condensing the knowledge of a 52-page course into 1,250 words for us to tight specifications.',
+  },
+  {
+    name: 'Lucy van Biljon',
+    job: 'Copywriting Tutor, College of Media and Publishing',
+    testimonial:
+      'Among the many students I tutor in the art of copywriting, Karen really stood out. Every piece of work she submitted was meticulously researched and her rationale regarding approach was explained in thorough detail. She consistently went above and beyond to produce work of a very high standard. I have no doubt that this enthusiasm, commitment and attention to detail will translate into her client work. If anyone needs a copywriter, especially one with a passion for travel, Karen will give 100% to any project.',
+  },
+  {
+    name: 'Julian Brouwer',
+    job: 'Proofreading and Editing Tutor, College of Media and Publishing',
+    testimonial:
+      'Karen is meticulous with her proofreading skills, reliable at delivering correct, concise copy, and she edits very well helping shape the tone and structure of the work in a way to get the best out of the piece. She successfully negotiated the course and achieved a Distinction grade. I have found her to be intelligent, keen to listen to advice and diligent. Karen possesses many good qualities and is capable of thinking “outside the box”. She is also not afraid to ask questions when she is unsure of something.',
+  },
+];
+
+const metadata = {
+  title: 'Testimonials',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Contact" title="Testimonals" />
+  <!-- Testimonials Widget *********** -->
+  <TestimonialsComponent title="Words from clients" testimonials={testimonials} />
+  <!--   { -->
+  <!--     testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`, -->
+  <!--     name: 'Emily Kennedy', -->
+  <!--     job: 'Front-end developer', -->
+  <!--     image: { -->
+  <!--       src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80', -->
+  <!--       alt: 'Emily Kennedy Image', -->
+  <!--     }, -->
+  <!--   }, -->
+  <!--   { -->
+  <!--     testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`, -->
+  <!--     name: 'Sarah Hansen', -->
+  <!--     job: 'Photographer', -->
+  <!--     image: { -->
+  <!--       src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80', -->
+  <!--       alt: 'Sarah Hansen Image', -->
+  <!--     }, -->
+  <!--   }, -->
+  <!--   { -->
+  <!--     testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`, -->
+  <!--     name: 'Mark Wilkinson', -->
+  <!--     job: 'Small business owner', -->
+  <!--     image: { -->
+  <!--       src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80', -->
+  <!--       alt: 'Mark Wilkinson Image', -->
+  <!--     }, -->
+  <!--   }, -->
+  <!-- ]} -->
+  <!-- callToAction={ -->
+  <!--   { -->
+  <!--     target: '_blank', -->
+  <!--     text: 'More testimonials...', -->
+  <!--     href: 'https://github.com/onwidget/astrowind', -->
+  <!--     icon: 'tabler:chevron-right', -->
+  <!--   } -->
+  <!-- } -->
+  <!-- /> -->
+  <!-- </TestimonialsComponent> -->
+</Layout>

@@ -1,26 +1,20 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About me',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
-  >
+  <Hero tagline="About me">
     <Fragment slot="title">
       Elevate your online presence with our <br />
       <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
@@ -33,196 +27,120 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <Content
+    title="Thank you for checking out my portfolio"
+    image={{
+      src: 'https://images.ctfassets.net/9hqhye2e9vh3/6HPqrX4nHFymHTzng93ZSo/87a81d2f148daed5753a37c49d6614c9/Main5-03.jpeg',
+      alt: 'Karen on a cruise ship',
+    }}
+  >
+    <Fragment slot="content">
+      <p>My name is Karen. I’m a copywriter, content writer and travel junkie living in Edinburgh, Scotland.</p>
+      <p>
+        A few of the brands I’ve worked with since 2017 include: National Geographic Traveller (UK), Holland America
+        Line, ASTA Worldwide Destinations Guide, ABTA, Postcards, and Flight Centre.
+      </p>
+      <p>
+        Before discovering the joys of content and copywriting: I spent 15 years working on cruise ships in
+        entertainment and then sales and marketing selling cruises; managed entertainment and sang in Spain; taught
+        English in Italy; and backpacked around the US.
+      </p>
+      <p>
+        I created a website about travel by cruise ship giving tips on what to do in ports, and advice on travel and
+        ship life CruiseShipKaren.com
+      </p>
+      <p>
+        Words have always been my thing, from speaking them while hosting and managing entertainment teams, singing them
+        as a vocalist, teaching them while English teaching and learning other languages, to writing them to inform,
+        educate, entertain, inspire and persuade.
+      </p>
+      <p>
+        I have you covered for any type of content, weaving words to spice up the narrative of your product or story,
+        researching thoroughly and creating the message you need.
+      </p>
+    </Fragment>
+  </Content>
+
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Travel stats"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Countries', amount: '113' },
+      { title: 'Cruise ports', amount: '350+' },
+      { title: 'Years in travel', amount: '23' },
+      { title: 'Continents', amount: '6' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="My education"
+    subtitle="I’m a big believer in constant personal development and honing your craft. Here’s a summary of my relevant education so far:"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+        title: 'MBA (Executive), specialising in marketing',
+        description: '2021 - University of the Highlands and Islands',
         icon: 'tabler:template',
       },
       {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+        title: 'Diploma in Proofreading and Editing (Distinction)',
+        description: '2020 - College of Media and Publishing',
         icon: 'tabler:template',
       },
       {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+        title: 'Business of Blogging',
+        description: '2018 - Nomadic Matt’s Media School',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Diploma in Copywriting',
+        description: '2020 - College of Media and Publishing',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Travel Writing course online with Prof. David Farley',
+        description: '2019 - Colombia University',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'BA in Applied Music (vocals)',
+        description: '2015 - University of the Highlands and Islands',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'NVQ in Team Leading & Management',
+        description: '2009 - CMI, University of Hull, England',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'TEFL Diploma',
+        description: '2008 - I to I International',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'HND in Music Performance',
+        description: '2000 - University of the Highlands and Islands',
         icon: 'tabler:template',
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- CallToAction Widget *********** -->
 
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
+  <CallToAction
+    actions={[
       {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+        variant: 'primary',
+        text: "Let's chat",
+        href: '/contact',
+        icon: 'tabler:message-dots',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
+  >
+    <Fragment slot="title"> Want to talk about a project? </Fragment>
+  </CallToAction>
 </Layout>

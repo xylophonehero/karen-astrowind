@@ -1,0 +1,283 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Writing',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Writing"
+    title="Elevate your projects with our stunning templates"
+    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
+    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Explore our diverse templates"
+    subtitle="Discover our selection below to streamline and elevate your projects."
+    columns={3}
+    items={[
+      {
+        title: 'Content Creation',
+        description:
+          'Articles, blogs, how-to pieces, guides, whatever you need. On any topic and specialising in travel.',
+        icon: 'tabler:article',
+      },
+      {
+        title: 'Social Media',
+        description:
+          'Helping you find your voice on social media to stand out from the crowd, stay relevant and talked about.',
+        icon: 'tabler:brand-twitter',
+      },
+      {
+        title: 'Press and Print',
+        description: 'Engaging copy that people want to read, with catchy headlines.',
+        icon: 'tabler:news',
+      },
+      {
+        title: 'Advertising Content',
+        description:
+          'Well-researched content written in your publication’s tone of voice, giving you advertising content that doesn’t feel like an advert at all.',
+        icon: 'tabler:ad-2',
+      },
+      {
+        title: 'Advertising Ideas',
+        description: 'Big ideas for how to increase your reach. Fresh ways to sell your products and concepts.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Video Scripts',
+        description:
+          'Promotional video, educational or practical, I’ll write the words to accompany your visual vision.',
+        icon: 'tabler:camera-plus',
+      },
+      {
+        title: 'Leaflets and Brochures',
+        description: 'Leaflets that give your message clearly. Brochures that people read and remember.',
+        icon: 'tabler:brand-pagekit',
+      },
+      {
+        title: 'Names, Taglines, and Slogans',
+        description: 'Catchy ways I’ll help you be the talk of the town (or your niche anyway).',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Direct Response',
+        description: 'Newsletters, direct mail, and email. Giving you words that convert to action.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Press Releases',
+        description:
+          'If you want to get your company’s news some attention, I’ll get your latest product, new team member or event noticed, I can help you with that.',
+        icon: 'tabler:brand-redhat',
+      },
+      {
+        title: 'Web Copy',
+        description: 'Copywriting and SEO services. Amp up the power of your website and brand.',
+        icon: 'tabler:seo',
+      },
+      {
+        title: 'Brand Development',
+        description: 'Helping craft your brand’s story and finding your tone of voice.',
+        icon: 'tabler:brand-apple',
+      },
+      {
+        title: 'Proofreading',
+        description:
+          'I can check any important document, essay, publication, webpage, website, that you’ve written (including all types above) for grammar, spelling, punctuation, structure and facts. I can proofread from Word using Track Changes, PDFs using Adobe Reader or on paper.',
+        icon: 'tabler:eyeglass-2',
+      },
+      {
+        title: 'Copy Editing',
+        description:
+          'I can edit any type of document or article you’ve written (including all pre-mentioned ones) to proofreading standard plus suggesting any content or structural changes needed, rewriting parts where needed.',
+        icon: 'tabler:edit',
+      },
+      {
+        title: 'Web Development',
+        description:
+          'If you need a website with your words – whether that be an e-commerce site, portfolio site, blog, anything you need – I work closely with web developer Nick Worrall, who I highly recommend, and we can offer you a package deal.',
+        icon: 'tabler:code',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="FAQs"
+    subtitle=""
+    columns={1}
+    items={[
+      {
+        title: 'Why do I need a content writer or copywriter?',
+        description:
+          'With competition in every sector, standing out is crucial. A professional copywriter can help make your product, services, and message catch the attention of potential customers by crafting compelling content. Content writers help tell your story in an informative, educational, or entertaining way to engage customers.',
+      },
+      {
+        title: 'Why do I need a proofreader or editor?',
+        description:
+          'Professional appearance in communication is critical for businesses. Poor grammar, spelling, and punctuation can make a bad impression and might lead to potential business losses. A proofreader or editor ensures that your content is polished and professional, enhancing your credibility.',
+      },
+      {
+        title: 'How does it work?',
+        description:
+          'The process begins with a consultation to discuss your needs. After agreeing on the scope of work, a contract is signed and a deposit is made. Work begins, followed by reviews and adjustments until the final product is satisfactory. For editing, the document is reviewed first to determine the level of editing needed.',
+      },
+      {
+        title: 'Can you create my website for me?',
+        description:
+          "If you need a website, collaboration with a skilled web developer is available. Whether it's an e-commerce, portfolio, or any other type of site, there are package deals available, offering professional and affordable solutions.",
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <!-- <Content -->
+  <!--   isReversed -->
+  <!--   items={[ -->
+  <!--     { -->
+  <!--       title: 'High-Quality Designs', -->
+  <!--       description: -->
+  <!--         'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.', -->
+  <!--       icon: 'tabler:wand', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Customization Tools', -->
+  <!--       description: -->
+  <!--         'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.', -->
+  <!--       icon: 'tabler:settings', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Pre-Designed Elements', -->
+  <!--       description: -->
+  <!--         'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.', -->
+  <!--       icon: 'tabler:presentation', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Preview and Mockup Views', -->
+  <!--       description: -->
+  <!--         'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.', -->
+  <!--       icon: 'tabler:carousel-horizontal', -->
+  <!--     }, -->
+  <!--   ]} -->
+  <!--   image={{ -->
+  <!--     src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80', -->
+  <!--     alt: 'Features Image', -->
+  <!--   }} -->
+  <!-- > -->
+  <!--   <Fragment slot="content"> -->
+  <!--     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3> -->
+  <!--   </Fragment> -->
+  <!-- </Content> -->
+
+  <!-- Content Widget **************** -->
+
+  <!-- <Content -->
+  <!--   isAfterContent -->
+  <!--   items={[ -->
+  <!--     { -->
+  <!--       title: 'Time Savings', -->
+  <!--       description: -->
+  <!--         'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.', -->
+  <!--       icon: 'tabler:clock', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Professional Appearance', -->
+  <!--       description: -->
+  <!--         'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.', -->
+  <!--       icon: 'tabler:school', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Cost-Efficiency', -->
+  <!--       description: -->
+  <!--         'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.', -->
+  <!--       icon: 'tabler:coin', -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       title: 'Instant Download', -->
+  <!--       description: -->
+  <!--         'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.', -->
+  <!--       icon: 'tabler:file-download', -->
+  <!--     }, -->
+  <!--   ]} -->
+  <!--   image={{ -->
+  <!--     src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80', -->
+  <!--     alt: 'Benefits Image', -->
+  <!--   }} -->
+  <!-- > -->
+  <!--   <Fragment slot="content"> -->
+  <!--     <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3> -->
+  <!--   </Fragment> -->
+  <!-- </Content> -->
+
+  <!-- Testimonials Widget *********** -->
+
+  <!-- <Testimonials -->
+  <!--   title="Words from real customers" -->
+  <!--   testimonials={[ -->
+  <!--     { -->
+  <!--       testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`, -->
+  <!--       name: 'Emily Kennedy', -->
+  <!--       job: 'Front-end developer', -->
+  <!--       image: { -->
+  <!--         src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80', -->
+  <!--         alt: 'Emily Kennedy Image', -->
+  <!--       }, -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`, -->
+  <!--       name: 'Sarah Hansen', -->
+  <!--       job: 'Photographer', -->
+  <!--       image: { -->
+  <!--         src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80', -->
+  <!--         alt: 'Sarah Hansen Image', -->
+  <!--       }, -->
+  <!--     }, -->
+  <!--     { -->
+  <!--       testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`, -->
+  <!--       name: 'Mark Wilkinson', -->
+  <!--       job: 'Small business owner', -->
+  <!--       image: { -->
+  <!--         src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80', -->
+  <!--         alt: 'Mark Wilkinson Image', -->
+  <!--       }, -->
+  <!--     }, -->
+  <!--   ]} -->
+  <!--   callToAction={{ -->
+  <!--     target: '_blank', -->
+  <!--     text: 'More testimonials...', -->
+  <!--     href: 'https://github.com/onwidget/astrowind', -->
+  <!--     icon: 'tabler:chevron-right', -->
+  <!--   }} -->
+  <!-- /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: "Let's chat",
+        href: '/contact',
+      },
+    ]}
+    title="Ready to talk?"
+  />
+</Layout>
