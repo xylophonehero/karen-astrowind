@@ -286,3 +286,7 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+export interface Richtext extends Widget {
+  content?: string;
+}

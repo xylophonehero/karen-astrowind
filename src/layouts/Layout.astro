@@ -19,9 +19,10 @@ import type { MetaData as MetaDataType } from '~/types';
 
 export interface Props {
   metadata?: MetaDataType;
+  bg?: string;
 }
 
-const { metadata = {} } = Astro.props;
+const { metadata = {}, bg = 'bg-page' } = Astro.props;
 const { language, textDirection } = I18N;
 ---
 
@@ -40,7 +41,7 @@ const { language, textDirection } = I18N;
     <ViewTransitions fallback="swap" />
   </head>
 
-  <body class="antialiased text-default bg-page tracking-tight">
+  <body class:list={['antialiased text-default tracking-tight', bg]}>
     <slot />
 
     <BasicScripts />

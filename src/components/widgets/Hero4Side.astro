@@ -1,0 +1,57 @@
+---
+import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  title?: string;
+  titleTransition?: string;
+  route?: string;
+  subtitle?: string;
+  image?: string;
+  direction?: 'left' | 'right';
+}
+
+const { title, titleTransition, route, subtitle, image, direction = 'left' } = Astro.props;
+---
+
+<a
+  href={route}
+  class:list={[
+    'group flex md:flex-col justify-center ',
+    direction === 'left' ? 'bg-gradient-to-r from-purple-900/30' : 'bg-gradient-to-l from-teal-900/30',
+  ]}
+>
+  <span
+    class:list={[
+      'flex md:flex-col justify-center items-center gap-4 transition',
+      direction === 'left' ? 'group-hover:translate-x-9' : 'group-hover:-translate-x-9',
+    ]}
+  >
+    <span
+      class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+      transition:name={`${titleTransition}-tagline`}
+      transition:animate="none"
+    >
+      {title}
+    </span>
+    <span transition:name={`${titleTransition}-title`} transition:animate="none">{subtitle}</span>
+    <Image
+      class="mx-auto rounded-md w-full"
+      widths={[400, 768, 1024, 2040]}
+      sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+      loading="eager"
+      width={1024}
+      height={576}
+      src={image}
+      alt="hero image"
+      transition:name={`${titleTransition}-image`}
+      transition:animate="none"
+    />
+    <span class="opacity-0 group-hover:opacity-100 transition">
+      <Icon
+        class="text-7xl"
+        name={direction === 'left' ? 'tabler:arrow-big-right-filled' : 'tabler:arrow-big-left-filled'}
+      />
+    </span>
+  </span>
+</a>

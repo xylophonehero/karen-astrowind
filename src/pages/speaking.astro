@@ -2,26 +2,54 @@
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Richtext from '~/components/widgets/Richtext.astro';
+import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
   title: 'Speaking',
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} bg="bg-teal-900/30">
   <Hero
+    transitionName="speaking"
     tagline="Speaking"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Travel and Keynote Speaker"
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      src: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      // src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'AstroWind Hero Image',
     }}
   />
+
+  <Richtext>
+    <Fragment slot="content">
+      <p>
+        With a rich background in giving destination enrichment talks for prestigious cruise lines, keynote speaking,
+        university lectures, and travel writing, I offer a wealth of knowledge and passion at every event.
+      </p>
+      <p>
+        As an authority in authenticity in cruise travel, my research and MBA dissertation delve into creating
+        meaningful travel experiences, connecting audiences with destinations on a deeper level.
+      </p>
+      <p>
+        Co-authoring a book on luxury yachting and the cruise industry further solidifies my expertise, complemented by
+        contributions to top publications like National Geographic Traveller (UK) and ASTA.
+      </p>
+      <p>
+        As a featured travel expert, I've hosted travel and cruise TV shows and produce engaging online content on my
+        travel website and YouTube channel, reaching global audiences.
+      </p>
+      <p>
+        My presentations aim to ignite curiosity and foster appreciation for travel, cultural exchange, and connection,
+        drawing from a lifetime of experience.
+      </p>
+      <p>Join me in connecting with destinations in transformative travel together.</p>
+    </Fragment>
+  </Richtext>
 
   <Content
     items={[

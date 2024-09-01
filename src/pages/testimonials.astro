@@ -1,7 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import HeroText from '~/components/widgets/HeroText.astro';
 import TestimonialsComponent from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+
+const tests = await getCollection('testimonial');
 
 const testimonials = [
   {
@@ -9,6 +12,10 @@ const testimonials = [
     job: 'Editorial Manager, APL Media',
     testimonial:
       'I have worked with Karen on several projects now and she is a dedicated, thorough and lovely person to work with. Her attention to detail and work ethic is excellent. She’s a diligent researcher and responds well to every brief. I would not hesitate to recommend her for any copywriting or content creation work.',
+    // image: {
+    //   src: 'https://images.ctfassets.net/9hqhye2e9vh3/1q5X6jL82yFGEoBhckPvvz/be0814da4414265aca8225f1245a138d/Jo_Fletcher-Cross',
+    //   alt: 'Jo Fletcher-Cross Image',
+    // },
   },
   {
     name: 'Zane Henry',
@@ -17,10 +24,10 @@ const testimonials = [
       'Karen was an excellent addition to our team, and contributed to several of our titles, including National Geographic Traveller, National Geographic Traveller Food, Postcards and Worldwide Destination Guide. She worked diligently and enthusiastically on multiple projects, including writing and researching original content, picture research and sub-editing. Karen was a pleasure to have in the office, and I was impressed by her passion, work ethic and flexibility. She will be a great addition to any organisation in the future and I wish her the best as in her career.',
   },
   {
-    name: 'Debra Corbeil',
-    job: 'Founder and Editor of The Planet D',
+    name: 'Marta Dickson',
+    job: 'Creative Director, MD Shoes Ltd',
     testimonial:
-      'Karen wrote a series of articles for The Planet D and she did a fantastic job. Karen was professional, efficient, and easy to work with producing great content. We would definitely hire Karen again.',
+      'I was very happy with Karen’s services. She provided me with a very well-written optimized SEO article for my blog that connected well with my reader demographic. She created a detailed content strategy for my social media accounts on Facebook and Instagram and provided me with full website analysis and created an insightful business strategy to improve traffic and user experience. Her work is thorough, well-researched and high-quality. I’ll definitely hire her again and would recommend her to anyone looking to connect with or extend their customer base.',
   },
   {
     name: 'Ieashia Krstev',
@@ -41,10 +48,10 @@ const testimonials = [
       "Karen is my script writer for season 2 of my travel show 'Traveling with Denella Ri'chard'. I am very happy with her work so have asked her to work on the whole season. Her writing has flair and insight. She understands the tone of voice, theme and message that I want my show to give, and her words contribute greatly to spreading that message. Her travel knowledge is broad and she has first-hand knowledge of many worldwide destinations which, along with her great research skills, make her an expert writer in the travel genre. She's a very hard worker and produces high-quality copy, and works well to tight deadlines when needed. I'd highly recommend her for any content, copywriting or script writing project and will be continuing to use her services for my show.",
   },
   {
-    name: 'Marta Dickson',
-    job: 'Creative Director, MD Shoes Ltd',
+    name: 'Debra Corbeil',
+    job: 'Founder and Editor of The Planet D',
     testimonial:
-      'I was very happy with Karen’s services. She provided me with a very well-written optimized SEO article for my blog that connected well with my reader demographic. She created a detailed content strategy for my social media accounts on Facebook and Instagram and provided me with full website analysis and created an insightful business strategy to improve traffic and user experience. Her work is thorough, well-researched and high-quality. I’ll definitely hire her again and would recommend her to anyone looking to connect with or extend their customer base.',
+      'Karen wrote a series of articles for The Planet D and she did a fantastic job. Karen was professional, efficient, and easy to work with producing great content. We would definitely hire Karen again.',
   },
   {
     name: 'Henry Alexander III',

@@ -1,0 +1,29 @@
+---
+import type { Richtext as Props } from '~/types';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+
+const {
+  content = await Astro.slots.render('content'),
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  withProse
+  containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  {
+    content && (
+      <div
+        class="mx-auto prose prose-lg max-w-4xl dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+        set:html={content}
+      />
+    )
+  }
+</WidgetWrapper>

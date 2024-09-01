@@ -47,6 +47,7 @@ export default defineConfig({
           'business-contact',
           'database',
         ],
+        'icon-park-solid': ['*'],
       },
     }),
 

@@ -11,9 +11,11 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero3 from '~/components/widgets/Hero3.astro';
+import Hero4 from '~/components/widgets/Hero4.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Karen Worrall - Travel writer and speaker',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,7 +23,8 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero2
+  <Hero4
+    classes={{ bg: 'bg-gradient-conic from-purple-400 via-pink-500 to-red-500' }}
     actions={[
       {
         variant: 'primary',
@@ -39,8 +42,7 @@ const metadata = {
     <Fragment slot="title">
       <span class="text-accent dark:text-white highlight">Karen Worrall</span>
     </Fragment>
-    <Fragment slot="subtitle">Content writer, Copywriter and Public speaker </Fragment>
-  </Hero2>
+  </Hero4>
 
   <!-- Note Widget ******************* -->
 

@@ -1,8 +1,8 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Richtext from '~/components/widgets/Richtext.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -14,27 +14,16 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="About me">
+  <HeroText tagline="About me">
     <Fragment slot="title">
       Elevate your online presence with our <br />
       <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
     </Fragment>
+  </HeroText>
 
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
-
-  <Content
-    title="Thank you for checking out my portfolio"
-    image={{
-      src: 'https://images.ctfassets.net/9hqhye2e9vh3/6HPqrX4nHFymHTzng93ZSo/87a81d2f148daed5753a37c49d6614c9/Main5-03.jpeg',
-      alt: 'Karen on a cruise ship',
-    }}
-  >
+  <Richtext>
     <Fragment slot="content">
+      <h2>Thank you for checking out my portfolio</h2>
       <p>My name is Karen. I’m a copywriter, content writer and travel junkie living in Edinburgh, Scotland.</p>
       <p>
         A few of the brands I’ve worked with since 2017 include: National Geographic Traveller (UK), Holland America
@@ -59,7 +48,7 @@ const metadata = {
         researching thoroughly and creating the message you need.
       </p>
     </Fragment>
-  </Content>
+  </Richtext>
 
   <!-- Stats Widget ****************** -->
 
@@ -84,47 +73,47 @@ const metadata = {
       {
         title: 'MBA (Executive), specialising in marketing',
         description: '2021 - University of the Highlands and Islands',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'Diploma in Proofreading and Editing (Distinction)',
         description: '2020 - College of Media and Publishing',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'Business of Blogging',
         description: '2018 - Nomadic Matt’s Media School',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'Diploma in Copywriting',
         description: '2020 - College of Media and Publishing',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'Travel Writing course online with Prof. David Farley',
-        description: '2019 - Colombia University',
-        icon: 'tabler:template',
+        description: '2019 - Columbia University',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'BA in Applied Music (vocals)',
         description: '2015 - University of the Highlands and Islands',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'NVQ in Team Leading & Management',
         description: '2009 - CMI, University of Hull, England',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'TEFL Diploma',
         description: '2008 - I to I International',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
       {
         title: 'HND in Music Performance',
         description: '2000 - University of the Highlands and Islands',
-        icon: 'tabler:template',
+        icon: 'icon-park-solid:degree-hat',
       },
     ]}
   />
